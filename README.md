@@ -1,16 +1,44 @@
-# React + Vite
+# 📊 React Dashboard Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive React dashboard showcasing **dynamic data visualization**, **state management**, and **interactive UI** components using modern frontend technologies.
 
-Currently, two official plugins are available:
+---
+Live link : https://fancy-chimera-d102a2.netlify.app/
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Dynamic Data Loading** – Fetch and display data from JSON files.
+- **State Management with Context API** – Share data between components without props drilling.
+- **Interactive Charts** – Visualize data using **Recharts**.
+- **Responsive Design** – Fully responsive using **Tailwind CSS** and **DaisyUI** components.
+- **Reusable Components** – Modular structure for scalability.
+- **Optimized Build** – Code-splitting ready for better performance.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend:** React 18, Vite
+- **UI/Styling:** Tailwind CSS + DaisyUI
+- **Charts:** Recharts
+- **State Management:** React Context API
+- **Build Tool:** Vite
+- **Data Source:** Local JSON files
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📂 Project Structure
+
+- `components/` – All reusable React components including UI & charts.
+- `context/` – Context API for global state management.
+- `assets/` – Sample data files (JSON).
+- `App.jsx` – Main wrapper with routes and layout.
+- `main.jsx` – React entry point.
+
+---
+
+## ⚡ Getting Started
+
+1. Clone the repo:
+
+git bash
+git clone <https://github.com/Sagor8187/Book-Inventory-Management.git>
