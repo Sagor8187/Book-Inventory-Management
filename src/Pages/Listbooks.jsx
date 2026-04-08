@@ -8,9 +8,10 @@ export default function Listbooks() {
     <div>
         <div className=' bg-gray-100 text-center font-bold text-xl p-5 md:p-10  m-5'>Books</div>
         
-       <div>
-         <button onClick={()=>setcurrent("read")}>Read Books</button>
-        <button onClick={()=>setcurrent("wish")}>Wishlist Books</button>
+       <div className='mx-50 flex gap-4 mb-5 border-b p-5'>
+         <button className={`btn ${current === "read"?"text-white bg-green-500 font-bold":"text-black"}`} onClick={()=>setcurrent("read")}>Read Books</button>
+        <button className={`btn ${current === "wish"?"text-white bg-green-500 font-bold":"text-black"}`} onClick={()=>setcurrent("wish")}>Wishlist Books</button>
+        
        </div>
        {current === "read"?<Listed></Listed>:<Wishlist></Wishlist>}
        

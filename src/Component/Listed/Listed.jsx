@@ -7,7 +7,7 @@ export default function Listed() {
   return (
     <div>
 
-
+    {read.length == 0?<p className='text-4xl text-center items-center font-bold '>No Books Read</p>:
     <div className="grid grid-cols-1 gap-5 max-w-4xl mx-auto bg-gray-100 p-4 rounded-xl">
         {read?.map(item =>  <div>
       <div className="flex flex-col md:flex-row gap-6 bg-gray-200 rounded-xl p-6 shadow">
@@ -69,7 +69,8 @@ export default function Listed() {
         </div>
       </div>
     </div>)}
-    </div>
+    </div>}
+    
     </div>
     
   )
