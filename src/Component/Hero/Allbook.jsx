@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router";
 
 export default function Allbook() {
   const [book, setbook] = useState([]);
@@ -14,9 +15,9 @@ export default function Allbook() {
   return (
     <div className="my-10 mx-10">
         <h1 className="text-4xl text-center font-bold my-5">Books</h1>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-10 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 ">
         {book.map((item) => (
-          <div
+          <Link to={`/details/${item.bookId}`}
             key={item.id}
             className="w-75 mx-auto bg-white rounded-2xl shadow-md p-4"
           >
@@ -54,7 +55,7 @@ export default function Allbook() {
                 <span>⭐</span>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 export default function Navbar() {
   return (
@@ -28,28 +29,28 @@ export default function Navbar() {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>Item 1</a>
+                <a>Home</a>
               </li>
               <li>
-                <a>Parent</a>
+                <a>Listed Books</a>
               </li>
               <li>
-                <a>Item 3</a>
+                <a>Pages to Read</a>
               </li>
             </ul>
           </div>
           <a className="btn btn-ghost text-xl font-bold">Book Vibe</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal flex gap-5 px-1">
             <li>
-              <a>Home</a>
+              <NavLink to={"/"} className={({isActive})=>{return isActive? "border text-green-500 border-green-500 font-bold ":"text-black"}}>Home</NavLink>
             </li>
             <li>
-              <a>Listed Books</a>
+              <NavLink to={"/listed"} className={({isActive})=>{return isActive? "border text-green-500 border-green-500 font-bold ":"text-black"}}>Listed Books</NavLink>
             </li>
             <li>
-              <a>Pages to Read</a>
+              <NavLink to={"/readpage"} className={({isActive})=>{return isActive? "border text-green-500 border-green-500 font-bold ":"text-black"}}>Pages to Read</NavLink>
             </li>
           </ul>
         </div>
