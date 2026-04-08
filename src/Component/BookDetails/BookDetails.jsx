@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router'
+import { Mycontext } from '../Context/ListedContext';
 
 export default function BookDetails() {
     const {id} = useParams()
 
+    const {AddToread} = useContext(Mycontext)
+    const {AddTowish} = useContext(Mycontext)
+    
      const [allbook, setallbook] = useState([]);
     
       useEffect(() => {
@@ -81,10 +85,10 @@ export default function BookDetails() {
 
           {/* Action Buttons */}
           <div className="flex gap-4 mt-auto">
-            <button className="px-8 py-2 border-2 border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-gray-100 transition-colors">
+            <button onClick={()=>AddToread(specefic)} className="px-8 py-2 border-2 border-gray-300 rounded-lg font-bold text-gray-700 hover:bg-gray-100 transition-colors">
               Read
             </button>
-            <button className="px-8 py-2 bg-[#5fb5c7] text-white rounded-lg font-bold hover:bg-[#4ea2b3] transition-colors shadow-md">
+            <button onClick={()=> AddTowish(specefic)} className="px-8 py-2 bg-[#5fb5c7] text-white rounded-lg font-bold hover:bg-[#4ea2b3] transition-colors shadow-md">
               Wishlist
             </button>
           </div>

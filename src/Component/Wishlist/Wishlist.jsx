@@ -1,15 +1,15 @@
 import React, { useContext } from 'react'
 import { Mycontext } from '../Context/ListedContext'
 
-export default function Listed() {
-  let {read} = useContext(Mycontext)
-  
+export default function Wishlist() {
+    const {wish} = useContext(Mycontext)
+   
   return (
-    <div>
-
+   <div>
+ 
 
     <div className="grid grid-cols-1 gap-5 max-w-4xl mx-auto bg-gray-100 p-4 rounded-xl">
-        {read?.map(item =>  <div>
+        {wish?.map(item =>  <div>
       <div className="flex flex-col md:flex-row gap-6 bg-gray-200 rounded-xl p-6 shadow">
 
         {/* Left Image */}
@@ -71,6 +71,5 @@ export default function Listed() {
     </div>)}
     </div>
     </div>
-    
   )
 }
