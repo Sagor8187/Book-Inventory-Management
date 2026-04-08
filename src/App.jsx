@@ -1,13 +1,12 @@
-import React from 'react'
-import Navbar from './Component/Shared/Navbar'
-import Hero from './Component/Hero/Hero'
+import React from "react";
+import Layout from "./Component/Layout/Layout";
+import { RouterProvider } from "react-router-dom";
+import Route from "./Component/Route/Route"
 
 export default function App() {
   return (
-    <div>
-
-      <Navbar></Navbar>
-      <Hero></Hero>
-    </div>
-  )
+    <RouterProvider router={Route}>
+      <Layout></Layout>
+    </RouterProvider>
+  );
 }

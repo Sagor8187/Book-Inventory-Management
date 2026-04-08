@@ -11,5 +11,6 @@ export default function Hero() {
             <img className='h-60' src={herobook} alt="book image" />
         </div>
     </div>
+      
   )
 }
